@@ -1,0 +1,70 @@
+blocks:
+- all_upstream_blocks_executed: true
+  color: null
+  configuration: {}
+  downstream_blocks:
+  - datatransform
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: dataload
+  retry_config: null
+  status: updated
+  timeout: null
+  type: data_loader
+  upstream_blocks: []
+  uuid: dataload
+- all_upstream_blocks_executed: false
+  color: null
+  configuration: {}
+  downstream_blocks:
+  - dataexport
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: datatransform
+  retry_config: null
+  status: updated
+  timeout: null
+  type: transformer
+  upstream_blocks:
+  - dataload
+  uuid: datatransform
+- all_upstream_blocks_executed: false
+  color: null
+  configuration: {}
+  downstream_blocks: []
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: dataexport
+  retry_config: null
+  status: updated
+  timeout: null
+  type: data_exporter
+  upstream_blocks:
+  - datatransform
+  uuid: dataexport
+callbacks: []
+concurrency_config: {}
+conditionals: []
+created_at: '2023-12-04 21:03:43.889217+00:00'
+data_integration: null
+description: null
+executor_config: {}
+executor_count: 1
+executor_type: null
+extensions: {}
+name: crime_pipeline
+notification_config: {}
+retry_config: {}
+run_pipeline_in_one_process: false
+spark_config: {}
+tags: []
+type: python
+updated_at: '2023-12-06 10:10:27'
+uuid: crime_pipeline
+widgets: []

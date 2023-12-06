@@ -28,3 +28,4 @@ def export_data_to_postgres(data, **kwargs) -> None:
                 index=False,  # Specifies whether to include index in exported table
                 if_exists='replace',  # Specify resolution policy if table name already exists
             )
+

@@ -7,7 +7,7 @@ if 'data_loader' not in globals():
 if 'test' not in globals():
     from mage_ai.data_preparation.decorators import test
 
-RECORDS_AMOUNT = 500
+RECORDS_AMOUNT = 100
 ORDER_BY = 'Date DESC'
 
 @data_loader
